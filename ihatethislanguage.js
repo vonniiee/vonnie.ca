@@ -4,7 +4,7 @@ var add = 0.0045;
 var x = add;
 const padge = 100;
 const content_delay = 500;
-const pages = ["main", "me", "projects", "friends", "socials"]
+const pages = ["main", "me", "blog", "socials", "academia"]
 
 
 var xterval = 0;
