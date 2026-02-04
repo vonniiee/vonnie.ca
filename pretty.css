@@ -82,6 +82,10 @@ body, html {
     mask-position: 0% 0%;
 }
 
+.container.bloghere::before {
+    mask-position: 0% 0%;
+}
+
 .main-container.done::before {
     mask-position: 0% 0%!important;
 }
@@ -150,8 +154,26 @@ body, html {
     mask-position: 99% 99%;
 }
 
+.container.bloghere {
+    animation: revealreverse;
+    animation-duration: 0.4s;
+    mask-position: 0% 0%;
+}
+
+.container.bloggone {
+    animation: goaway;
+    animation-duration: 0.4s;
+    mask-position: 0% 0%;
+}
+
 .content {
     width: 100%;
+}
+
+.scrolling {
+    margin-top: 25px;
+    height: 825px;
+    overflow: scroll;
 }
 
 .intro {

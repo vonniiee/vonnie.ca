@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Siobhan's zany blog!!</title>
+  <link>https://vonnie.ca/#blog</link>
+  <description>meeeeeee</description>
+  <item>
+    <title>First post</title>
+    <link>https://vonnie.ca/#post-first</link>
+    <description>Literally nothing here</description>
+  </item>
+</channel>
+
+</rss> 

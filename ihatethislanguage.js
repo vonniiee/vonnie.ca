@@ -4,7 +4,7 @@ var add = 0.0045;
 var x = add;
 const padge = 100;
 const content_delay = 500;
-const pages = ["main", "me", "blog", "socials", "academia"]
+const pages = ["main", "me", "blog", "socials", "academia", "post-first"]
 
 
 var xterval = 0;
@@ -93,14 +93,34 @@ function setPage(oldPage, page, didJustLoad) {
 	if (ruler) {
 	    ruler.remove();
 	}
-	document.body.innerHTML = page_dict[page] + document.body.innerHTML;
-	let old_container = document.getElementById(oldPage + "-container");
-	old_container.classList.add("gone");
-	setTimeout(() => {
-	    old_container.remove();
-	}, 400);
-	let new_container = document.getElementById(page + "-container");
-	new_container.classList.add("here");
+	if (oldPage == "blog" && page.startsWith("post")) {
+	    document.body.innerHTML = page_dict[page] + document.body.innerHTML
+	    let old_container = document.getElementById(oldPage + "-container");
+	    old_container.classList.add("bloggone");
+	    setTimeout(() => {
+		old_container.remove();
+	    }, 400);
+	    let new_container = document.getElementById(page + "-container");
+	    new_container.classList.add("here");
+	} else if (oldPage.startsWith("post") && page == "blog") {
+	    document.body.innerHTML = page_dict[page] + document.body.innerHTML
+	    let old_container = document.getElementById(oldPage + "-container");
+	    old_container.classList.add("gone");
+	    setTimeout(() => {
+		old_container.remove();
+	    }, 400);
+	    let new_container = document.getElementById(page + "-container");
+	    new_container.classList.add("bloghere");	    
+	} else {
+	    document.body.innerHTML = page_dict[page] + document.body.innerHTML;
+	    let old_container = document.getElementById(oldPage + "-container");
+	    old_container.classList.add("gone");
+	    setTimeout(() => {
+		old_container.remove();
+	    }, 400);
+	    let new_container = document.getElementById(page + "-container");
+	    new_container.classList.add("here");
+	}
     }
 }
 
