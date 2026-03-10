@@ -15,7 +15,7 @@ var firstDoneMain = false;
 var page_dict = {}
 
 function copyDiscord() {
-    navigator.clipboard.writeText("gilf.slayer");
+    navigator.clipboard.writeText("voonniiee");
     let tooltip = document.getElementById("tooltip");
     tooltip.classList.remove("hidden");
     tooltip.classList.add("shown");
